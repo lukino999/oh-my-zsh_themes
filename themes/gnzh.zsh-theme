@@ -46,7 +46,7 @@ ZSH_THEME_VIRTUALENV_SUFFIX=")%f "
 
 
 # git theming
-ZSH_THEME_GIT_PROMPT_PREFIX="${reset_color}%}%{${fg[red]}%}\uE0A0%{$FG[236]%}|%{${fg[red]}%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="${reset_color}%}%{${fg[red]}%}\uE0A0%{$FG[236]%}|%{${fg[red]}%}" # enable poweline font in iTerm
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{${fg[red]}%}%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CHANGED="%{$FG[039]%}%{✎%G%}"
 ZSH_THEME_GIT_PROMPT_DELETED="%{$fg[blue]%}%{␡%G%}"
@@ -85,10 +85,6 @@ my_git_super_status() {
       if [ "$GIT_UNTRACKED" -ne "0" ]; then
           STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_UNTRACKED$GIT_UNTRACKED%{${reset_color}%}"
       fi
-
-    #   if [ "$GIT_STASHED" -ne "0" ]; then
-    #       STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_STASHED$GIT_STASHED%{${reset_color}%}"
-    #   fi
 
       if [ "$GIT_CLEAN" -eq "1" ]; then
           STATUS="$STATUS$ZSH_THEME_GIT_PROMPT_CLEAN"
